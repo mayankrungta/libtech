@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<style>
+  {% block style %}
+  <link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'admin/css/widgets.css' %}" />
+  {% endblock %}
+</style>
+
+  {% block script %}
+  <script type="text/javascript" src="{% static 'admin/jsi18n/' %}"></script>
+  <script type="text/javascript" src="{% static 'admin/js/core.js' %}"></script>
+  {% endblock %}
+
+{% block extrahead %}{{ block.super }}
+{{ form.media }}
+{% endblock %}
+
+{% block content %}
+
+{% include 'form_include.html' with form=form submit_btn=submit_btn %}
+
+{% endblock %}

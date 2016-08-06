@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load django_tables2 crispy_forms_tags %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+{% render_table table %}
+
+{% endblock %}

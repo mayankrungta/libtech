@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block content %}
+<h1> Broadcast: {{ object.title }} </h1>
+<p> {{ object.description }} </p>
+<p> {{ object.start_time }} </p>
+<p> {{ object.end_time }} </p>
+
+{% if request.user.is_authenticated and object.media and object in request.user.mybroadcasts.broadcasts.all %}
+<p><a href ="{{ object.get_download }}">Download</a></p>
+<p><a href ="{{ object.get_download }}?preview=True">Preview</a></p>
+{% endif %}
+
+{% endblock %}

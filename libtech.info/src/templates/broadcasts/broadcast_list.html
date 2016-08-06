@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block style %}
+.abc {
+background-color: #e7e7e7;
+}
+
+.def {
+background-color: white;
+}
+{% endblock %}
+
+
+{% block content %}
+{% with abc=object_list %}
+
+<h1>Broadcasts</h1>
+<p>
+  <form method="GET" action="">
+    <input type="text" name="q" placeholder="Search" value="{{ request.GET.q }}" />
+    <input type="submit" value="Search" />
+  </form>
+</p>
+
+<ul>
+  {% for instance in object_list %}
+  <!-- {{ instance.user }} == {{ user }} -->
+  {% if instance.user == user %}
+  <li class="{% cycle 'abc' 'def' %}"><a href="{{ instance.get_absolute_url }}">{{ instance|upper }}</a> <br />
+    {{ instance.get_absolute_url|urlize }}
+    {{ instance.description|truncatechars:100 }} <br />
+    {{ instance.start_time }} <br />
+    {{ instance.end_time }}
+  </li>
+  {% endif %}
+  {% empty %}
+  <li>No Broadcasts Yet</li>
+  {% endfor %}
+
+{% endwith %}
+{% endblock %}

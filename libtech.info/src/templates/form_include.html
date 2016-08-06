@@ -1,0 +1,9 @@
+{% load crispy_forms_tags %}
+
+<div class='col-sm-6 col-sm-offset-3'>
+<form method="POST" action="" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <input type="submit" value="{% if submit_btn %} {{ submit_btn }} {% else %} Submit {% endif %} " />
+</form>
+</div>

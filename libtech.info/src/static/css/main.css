@@ -1,0 +1,16 @@
+.btn-primary {
+    background-image: linear-gradient(to bottom, #b71547 0, #883f72 100%);
+}
+
+.navbar-inverse .navbar-brand {
+    color: #4dfbc8;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding: 10px;
+    border-radius: 0px;
+}
+
+h1 {
+	color: green;
+}
