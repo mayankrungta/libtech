@@ -1,5 +1,5 @@
 TAGS
-settings.py
+#settings.py
 *.py[cod]
 *.py_*
 .Python
