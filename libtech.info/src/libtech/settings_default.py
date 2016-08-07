@@ -17,14 +17,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'chattisgarh.libtech@gmail.com'
-EMAIL_HOST_PASSWORD = 'CL123@gm#'
+EMAIL_HOST_PASSWORD = 'XXXXXXXX'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 EMAIL_SUBJECT_PREFIX = "[DjangoAdmin]: "
 ADMINS = (
     ('Mayank Rungta', 'mr.mynk@gmail.com'),
-    ('The Idea Breweries', 'theideabreweries@gmail.com'),
 )
 MANAGERS = ADMINS
 SEND_BROKEN_LINK_EMAILS = True
@@ -36,7 +35,7 @@ SEND_BROKEN_LINK_EMAILS = True
 SECRET_KEY = 'kpm87%^m!od7o)x6@8#-6+wmm^^3&d$3tz^7clm_=q_ebs!)3q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 if DEBUG == False:
     ALLOWED_HOSTS = ['crawl.libtech.info', '139.162.15.234', '127.0.0.1'] # ['127.0.0.1',]
@@ -61,15 +60,22 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
-    'mod_wsgi.server',
+    # 'mod_wsgi.server',
     'rest_framework',
     'stripe',
-
+    # 'datetimewidget',
+    'django_tables2',
+    #'django_filter'
     
     # Project Apps
     'blog',
-    'products',
+    'broadcasts',
+    'workdetails',
+    'addressbook',
     'profiles',
+
+    # TBD 
+    # 'csvimport.app.CSVImportConf',  # use AppConfig for django >=1.7 csvimport >=2.2
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -102,6 +108,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # Deprecated 'django.core.context_processors.csrf', in favor of -
                 'django.template.context_processors.csrf',
+                # Deprecated 'django.core.context_processors.request',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -113,13 +121,24 @@ WSGI_APPLICATION = 'libtech.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db', 'db.sqlite3'),
-    }
+if True:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db', 'db.sqlite3'),
+        }
 }
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'libtech',
+            'USER': 'ltadmin',
+            'PASSWORD': 'lta123',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -145,7 +164,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata' # 'UTC'
 
 USE_I18N = True
 
@@ -183,8 +202,11 @@ if DEBUG:
             return False
 
     DEBUG_TOOLBAR_CONFIG = {
-        'SHOW_TOOLBAR_CALLBACK': 'libtech.settings.show_toolbar'
+        'SHOW_TOOLBAR_CALLBACK': 'libtech.settings.show_toolbar',
+        'INTERCEPT_REDIRECTS': False,
     }
+
+    
 else:
     LOGGING = {
         'version': 1,
