@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/chiragmahapatra/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_a105805aaf8c0b3deba919e0dd80a1b538a3f768/classes.dex" />
+    </item>
+    <item
+        jar="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="cbe2432a179c4ef40ed4907d79e45e8e5746fced">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8f3f8d5d81ae378a29a932ca29973d435db43fdb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_11c2999991a28534eb254f9c28380808b3d869ee/classes.dex" />
+    </item>
+    <item
+        jar="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_598c979af4dcca599add5f8439ac9b9718b178c8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_7b68b11f59639b49d7b57aa0bd90e3ce07ba7e79/classes.dex" />
+    </item>
+    <item
+        jar="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f427a9de8af7e32d83af0e5a97889b0a41ec9c5c">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_3c2b3d15b0fc58506ba19ec37be28509f7f3f3df/classes.dex" />
+    </item>
+    <item
+        jar="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_818ddb8d96f1d744a2a46777b18d1cb3ee0a9a7d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/chiragmahapatra/AndroidStudioProjects/missed_call2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_338de30f523bd0abf414e28895a505e6ccb906b0/classes.dex" />
+    </item>
+
+</items>
