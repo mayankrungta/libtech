@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title %} {{ title }} {% endblock %}
-  
+
 {% block jumbotron %}
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
@@ -49,15 +49,26 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-3">
     <h2>How Can We?</h2>
     <p><a href="http://viveks.info/from-fractions-to-millions-getting-more-people-to-challenge-corruption-using-mobile-phones/">How can we</a> harness the power of technology to make governments more transparent, accountable and democratic </p>
     <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <a href="#"> <img class='img-responsive' src="{% static 'img/IMG_0941.jpg' %}" /> </a>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3 lead" style="text-align: center">
+    <a href="https://github.com/rajesh241/libtech.git">
+    <p> Open Source
+      <br />
+      <span class="fa-stack fa-lg fa-3x">
+        <i class="fa fa-circle-o-notch fa-spin fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x"></i>
+      </span>
+    </p>
+    </a>
+  </div>
+  <div class="col-md-3">
     {% if request.user.is_authenticated %}
     <h3>Hello {{ request.user }}</h3>
 
@@ -74,7 +85,7 @@
         </label> </div> </div>
 
         <a class="btn btn-link button secondaryAction" href="{% url 'account_reset_password' %}">Forgot Password?</a>
-        <a class="btn btn-link button secondaryAction" href="{% url 'account_signup' %}">Signup</a>
+        {# <a class="btn btn-link button secondaryAction" href="{% url 'account_signup' %}">Signup</a> #}
         <button class="primaryAction btn btn-default" type="submit">Sign In</button>
       </form>
     </div>
